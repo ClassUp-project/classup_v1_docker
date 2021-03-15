@@ -19,12 +19,12 @@ class Enquete extends Model
    public function  questionnaire()
    {
 
-          return $this->belongsTo(App\models\Questionnaire::class);
+          return $this->belongsTo(Questionnaire::class);
    }
 
    public function responses()
    {
 
-           return $this->hasMany(App\models\ReponseEnquete::class);
+           return $this->hasMany(ReponseEnquete::class);
    }
 }

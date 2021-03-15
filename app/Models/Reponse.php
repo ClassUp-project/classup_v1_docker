@@ -20,14 +20,14 @@ class Reponse extends Model
     public function question()
     {
 
-        return $this->belongsTo(App\models\Question::class);
+        return $this->belongsTo(Question::class);
     }
 
 
      public function responses()
      {
 
-         return $this->hasMany(App\models\ReponseEnquete::class);
+         return $this->hasMany(ReponseEnquete::class);
 
      }
 
