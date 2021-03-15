@@ -26,6 +26,21 @@
                 <x-input id="prenom" class="block mt-1 w-full" type="text" name="prenom" :value="old('prenom')" required autofocus />
             </div>
 
+            <div class="form-group row">
+
+                <div class="col-md-6">
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                        <input type="radio" class="btn-check" name="professeur" id="professeur" autocomplete="off" >
+                        <label class="btn btn-outline-primary" for="professeur">Professeur</label>
+
+                        <input type="radio" class="btn-check" name="eleve" id="eleve" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="eleve">Eleve</label>
+
+                    </div>
+                </div>
+            </div>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />

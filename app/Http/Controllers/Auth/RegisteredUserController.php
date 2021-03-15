@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Utilisateur;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -39,14 +39,14 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        Auth::login($user = User::create([
+        Auth::login($user = Utilisateur::create([
             'nom' => $request->nom,
             'prenom' => $request->prenom,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]));
 
-        event(new Registered($user));
+        
 
         if(isset($data['professeur'])){
             $roleProf = new Professeur($data);
@@ -55,6 +55,8 @@ class RegisteredUserController extends Controller
             $roleEleve = new Eleve($data);
             $user->eleve()->save($roleEleve);
         }
+
+        event(new Registered($user));
 
 
         return redirect(RouteServiceProvider::HOME);
