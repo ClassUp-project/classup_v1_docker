@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,29 +21,29 @@ class Groupe extends Model
     public function professeur()
     {
 
-        return $this->belongsToMany(Professeur::class);
+        return $this->belongsToMany(App\models\Professeur::class);
     }
 
 
     public function matiere()
     {
 
-        return $this->belongsToMany(Matiere::class);
+        return $this->belongsToMany(App\models\Matiere::class);
     }
 
     public function utilisateur()
     {
-        return $this->belongsTo(Utilisateur::class);
+        return $this->belongsTo(App\models\Utilisateur::class);
     }
 
     public function eleve()
     {
-        return $this->belongsTo(Eleve::class);
+        return $this->belongsTo(App\models\Eleve::class);
     }
 
     public function questionnaire()
     {
-        return $this->hasMany(Questionnaire::class);
+        return $this->hasMany(App\models\Questionnaire::class);
     }
 
 

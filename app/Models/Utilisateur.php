@@ -47,20 +47,20 @@ class Utilisateur extends Authenticatable
 
     public function questionnaires()
     {
-        return $this->hasMany(Questionnaire::class);
+        return $this->hasMany(App\models\Questionnaire::class);
 
     }
 
     public function matiere()
     {
-        return $this->hasMany(Matiere::class);
+        return $this->hasMany(App\models\Matiere::class);
 
     }
 
 
     public function linscription()
     {
-        return $this->hasOne(Linscription::class);
+        return $this->hasOne(App\models\Linscription::class);
     }
 
 
@@ -80,18 +80,18 @@ class Utilisateur extends Authenticatable
 
     public function groupe()
     {
-        return $this->hasMany(Groupe::class);
+        return $this->hasMany(App\models\Groupe::class);
     }
 
 
     public function professeur(){
 
-        return $this->belongsToMany(\App\Professeur::class, 'professeur_utilisateur');
+        return $this->belongsToMany(App\models\Professeur::class, 'professeur_utilisateur');
     }
 
     public function eleve(){
 
-        return $this->belongsToMany(\App\Eleve::class, 'eleve_utilisateur');
+        return $this->belongsToMany(App\models\Eleve::class, 'eleve_utilisateur');
     }
 
     public function hasRole(){

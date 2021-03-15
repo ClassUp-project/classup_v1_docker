@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Eleve;
-use App\Groupe;
-use App\Matiere;
-use App\Professeur;
-use App\Utilisateur;
+use App\Models\Eleve;
+use App\Models\Groupe;
+use App\Models\Matiere;
+use App\Models\Professeur;
+use App\Models\Utilisateur;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Request;
 

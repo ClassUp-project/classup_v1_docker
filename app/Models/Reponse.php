@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,14 +20,14 @@ class Reponse extends Model
     public function question()
     {
 
-        return $this->belongsTo(Question::class);
+        return $this->belongsTo(App\models\Question::class);
     }
 
 
      public function responses()
      {
 
-         return $this->hasMany(ReponseEnquete::class);
+         return $this->hasMany(App\models\ReponseEnquete::class);
 
      }
 

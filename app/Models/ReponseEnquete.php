@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,7 +16,7 @@ class ReponseEnquete extends Model
 
    public function survey()
    {
-      return $this->belongsTo(Enquete::class);
+      return $this->belongsTo(App\models\Enquete::class);
 
    }
 

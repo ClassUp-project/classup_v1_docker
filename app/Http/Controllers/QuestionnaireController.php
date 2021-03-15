@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Questionnaire;
 use Illuminate\Http\Request;
 
 class QuestionnaireController extends Controller
@@ -33,7 +34,7 @@ class QuestionnaireController extends Controller
 }
 
 
-    public function show(\App\Questionnaire $questionnaire)
+    public function show(Questionnaire $questionnaire)
  {
      $questionnaire->load('questions.answers.responses');
 

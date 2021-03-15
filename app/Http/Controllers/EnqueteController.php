@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Questionnaire;
+use App\Models\Questionnaire;
 
 
 class EnqueteController extends Controller

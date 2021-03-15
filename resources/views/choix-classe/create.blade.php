@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
 
     <h2>Professeur : {{ Auth::user()->nom }}</h2>

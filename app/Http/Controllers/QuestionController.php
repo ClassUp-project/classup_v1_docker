@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Reponse;
-use App\Question;
-use App\Questionnaire;
+use App\Models\Reponse;
+use App\Models\Question;
+use App\Models\Questionnaire;
 
 
 class QuestionController extends Controller

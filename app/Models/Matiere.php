@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,22 +20,22 @@ class Matiere extends Model
     public function groupeMatiere()
     {
 
-        return $this->belongsToMany(Groupe::class);
+        return $this->belongsToMany(App\models\Groupe::class);
     }
 
     public function profMatiere()
     {
-        return $this->belongsTo(Professeur::class);
+        return $this->belongsTo(App\models\Professeur::class);
     }
 
     public function utilisateur()
     {
-        return $this->belongsTo(Utilisateur::class);
+        return $this->belongsTo(App\models\Utilisateur::class);
     }
 
     public function eleve()
     {
-        return $this->belongsTo(Eleve::class);
+        return $this->belongsTo(App\models\Eleve::class);
     }
 
 

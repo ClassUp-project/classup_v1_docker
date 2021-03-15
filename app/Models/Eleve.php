@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,7 +24,7 @@ class Eleve extends Model
      public function utilisateur()
      {
 
-         return $this->belongsToMany(Utilisateur::class,'eleve_utilisateur');
+         return $this->belongsToMany(App\models\Utilisateur::class,'eleve_utilisateur');
 
      }
 
