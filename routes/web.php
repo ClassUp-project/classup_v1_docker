@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 require __DIR__.'/auth.php';
 
+Route::get('/home', 'App\Http\Controllers\HomeController@index');
+
 //Route vers le choix et vue de la classe côté professeur
 Route::get('/maclasses/create', 'App\Http\Controllers\GroupeController@create')->name('classeprof');
 Route::post('/maclasses', 'App\Http\Controllers\GroupeController@store');

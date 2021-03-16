@@ -65,7 +65,7 @@
 
                            <li class="list-group-item">
 
-                           <a href="{{$questionnaire->path() }}">{{$questionnaire->title}}</a>
+                           <a href="{{$questionnaire->path() }}">{{ $questionnaire->titre }}</a>
 
                            <div class="mt-2">
 

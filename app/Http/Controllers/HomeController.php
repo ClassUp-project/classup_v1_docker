@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\AccueilEleve;
+use App\Profile;
+use App\User;
+use App\Models\Questionnaire;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
@@ -16,6 +19,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
     }
 
     /**
@@ -23,16 +27,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Questionnaire $questionnaires)
     {
-        $questionnaires =auth()->user()->questionnaires;
 
+        $questionnaires = auth()->user()->questionnaires;
 
-        return view('home' , compact('questionnaires'));
+        
 
+        return view('home', compact('questionnaires'));
     }
 
 
+    public function user(User $user)
+    {
 
+       $user=auth()->user()->profile;
+       return view('home', compact('user'));
 
+    }
 }
