@@ -1,10 +1,10 @@
 # For more information: https://laravel.com/docs/sail
 version: '3'
 services:
-        
+
     laravel.test:
         build:
-            context: ./vendor/laravel/sail/runtimes/8.0
+            context: ./docker/8.0
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
@@ -36,15 +36,15 @@ services:
 
     phpmyadmin:
         image: phpmyadmin
-        container_name: phpmyadmin_docker_laravel
+        container_name: phpmyadmin_docker
         restart: always
-        depends_on: 
+        depends_on:
             - mysql
-        ports: 
+        ports:
             - 8080:80
-        environment: 
+        environment:
             PMA_HOST: mysql
-        networks: 
+        networks:
             - sail
 
 networks:

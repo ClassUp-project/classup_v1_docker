@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!
-                    
+
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
 
                            <li class="list-group-item">
 
-                           <a href="{{$questionnaire->path() }}">{{$questionnaire->title}}</a>
+                           <a href="{{$questionnaire->path() }}">{{$questionnaire->titre}}</a>
 
                            <div class="mt-2">
 

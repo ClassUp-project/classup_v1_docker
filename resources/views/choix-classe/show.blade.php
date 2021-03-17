@@ -40,6 +40,21 @@
 
                 </div>
 
+                <div class="card ml-4 mt-5" style="width: 18rem;">
+
+                    <img class="card-img-top bg-primary" style="width:35px; height:35px;" src="https://img.icons8.com/dusk/64/000000/survey.png" alt="questionnaire">
+                    <div class="card-body" style="height:10px;">
+                    <h5 class="card-text"><strong>Toutes mes matières</strong></h5>
+                    </div>
+                    <hr>
+                    <ul class="list-group list-group-flush">
+                        @foreach ($questionnaires as $questionnaire)
+                        <h1>{{$questionnaire->titre}}</h1>
+                        @endforeach
+                    </ul>
+
+                </div>
+
         </div>
 
             <div class="row justify-content-center">

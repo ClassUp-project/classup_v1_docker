@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\AccueilEleve;
 use App\Profile;
 use App\User;
-use App\Models\Questionnaire;
 use Illuminate\Http\Request;
 
 
@@ -27,14 +26,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Questionnaire $questionnaires)
+    public function index()
     {
 
         $questionnaires = auth()->user()->questionnaires;
 
-        
+        $teacher = auth()->user()->adminProfesseur;
 
-        return view('home', compact('questionnaires'));
+        $student = auth()->user()->student;
+
+        return view('home', compact('questionnaires', 'student', 'teacher'));
     }
 
 

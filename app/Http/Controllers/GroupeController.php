@@ -5,6 +5,7 @@ use App\Models\Eleve;
 use App\Models\Groupe;
 use App\Models\Matiere;
 use App\Models\Professeur;
+use App\Models\Questionnaire;
 use App\Models\Utilisateur;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Request;
@@ -64,9 +65,11 @@ class GroupeController extends Controller
 
         $matiere = auth()->user()->matiere;
 
+        $questionnaires = Questionnaire::all();
 
 
-        return view('choix-classe.show', compact('groupe','matiere'));
+
+        return view('choix-classe.show', compact('groupe','matiere','questionnaires'));
     }
 
 
