@@ -24,17 +24,13 @@
 
 
                    <div class=" d-flex justify-content-around ">
-                    @can('manage-users')
+
                     <a href="/questionnaires/create" class="btn btn-primary p-2 m-2 rounded-pill">Créez un nouveau questionnaire</a>
-                    @endcan
+
                     <a href="/images" class="btn btn-primary p-2 m-2 rounded-pill">Ajouter des documents ou vidéo</a>
-                    @can('manage-users')
+
                     <a href="/graphs/create" class="btn btn-primary p-2 m-2 rounded-pill">Entrer des résultats par élève</a>
-                    @endcan
-                    @if(Auth::user()->hasRole('Student'))
-                       <a href="{{ route('dashboardeleve') }}" class="btn btn-primary p-2 m-2 rounded-pill">Retourner sur mon dashboard</a>
-                       <a href="{{ route('accueileleve') }}" class="btn btn-primary p-2 m-2 rounded-pill">Aller sur ma toolbox</a>
-                    @endif
+
                    </div>
                 </div>
             </div>
