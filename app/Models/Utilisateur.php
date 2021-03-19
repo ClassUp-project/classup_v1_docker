@@ -102,4 +102,13 @@ class Utilisateur extends Authenticatable
         }
         return false;
     }
+
+    public function imageFileUpload(){
+
+        return $this->hasMany(Dropzone::class);
+    }
+
+
+
+
 }

@@ -57,6 +57,12 @@ Route::post('/matieres', 'App\Http\Controllers\MatiereController@store');
 Route::get('/matières/{matiere}', 'App\Http\Controllers\MatiereController@show');
 
 
+//route Dropzone
+Route::get('/images', 'App\Http\Controllers\DropzoneController@index');
+Route::get('/download/{id}','App\Http\Controllers\DropzoneController@download');
+Route::delete('/images/{imageUpload}', 'App\Http\Controllers\DropzoneController@destroy');
+
+
 //Route dasboard eleve
 Route::get('/eleves/', 'App\Http\Controllers\EleveController@index')->name('dashboardEleve');
 

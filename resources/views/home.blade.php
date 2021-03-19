@@ -12,7 +12,7 @@
 
 
 
-                <div class="card-header text-center text-primary">Que souhaitez vous faire</div>
+                <div class="card-header text-center text-primary font-weight-bold">Que souhaitez vous faire</div>
 
 
 
