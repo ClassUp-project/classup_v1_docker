@@ -11,6 +11,12 @@ class Dropzone extends Model
 
     protected $guarded=[];
 
+    protected $table = 'dropzone';
+
+    public $timestamps = false;
+
+    protected $primaryKey = 'iddropzone';
+
 
 
 

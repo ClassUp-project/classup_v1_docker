@@ -54,7 +54,7 @@
             </div>
 
             <div class="d-flex justify-content-center mt-5 ">
-                <a href="/accueil" class="ml-5" style="color:blue;">
+                <a href="/home" class="ml-5" style="color:blue;">
                     <button class="btn btn-primary w-40">
                         <img src="https://img.icons8.com/ios/50/000000/hand-left.png" style="width:35px; height:35px; padding-bottom:5px"/> Retrouvez tous vos docs
                     </button>
